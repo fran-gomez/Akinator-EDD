@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #292827; -fx-border-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GUI">
+   <children>
+      <Label fx:id="labelNombre" alignment="CENTER" layoutX="233.0" layoutY="56.0" style="-fx-alignment: center;" text="Akinator" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldRuta" layoutX="137.0" layoutY="188.0" prefHeight="25.0" prefWidth="326.0" promptText="Ruta de archivo" />
+      <Button fx:id="botonEmpezar" layoutX="274.0" layoutY="294.0" mnemonicParsing="false" onAction="#botonEmpezar" text="Empezar" />
+      
+      <Label fx:id="labelPregunta" alignment="CENTER" contentDisplay="CENTER" layoutY="56.0" prefHeight="50.0" prefWidth="600.0" text="Pregunta" textFill="WHITE" visible="false">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonSi" layoutX="219.0" layoutY="260.0" mnemonicParsing="false" onAction="#botonSi" text="Si " visible="false" />
+      <Button fx:id="botonNo" layoutX="351.0" layoutY="260.0" mnemonicParsing="false" onAction="#botonNo" text="No" visible="false" />
+      <Button fx:id="botonGuardar" layoutX="270.0" layoutY="295.0" mnemonicParsing="false" onAction="#botonGuardar" text="Guardar" visible="false" />
+      <Label fx:id="labelSuperheroe" alignment="CENTER" layoutX="1.0" layoutY="63.0" prefHeight="39.0" prefWidth="600.0" text="¿En que superheroe estas pensando?" textFill="WHITE" visible="false">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldSuperheroe" layoutX="88.0" layoutY="132.0" prefHeight="25.0" prefWidth="280.0" promptText="Superheroe" visible="false" />
+      <Button fx:id="botonOk" layoutX="397.0" layoutY="132.0" mnemonicParsing="false" onAction="#botonOk" text="Ok" visible="false" />
+      <Label fx:id="labelDiferencia" alignment="CENTER" layoutX="-1.0" layoutY="194.0" prefHeight="39.0" prefWidth="600.0" text="¿Que diferencia hay entre new y old?" textFill="WHITE" visible="false">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldDiferencia" layoutX="88.0" layoutY="257.0" prefHeight="25.0" prefWidth="280.0" promptText="Diferencia" visible="false" />
+      <Button fx:id="botonAprender" layoutX="395.0" layoutY="260.0" mnemonicParsing="false" onAction="#botonAprender" text="Aprender" visible="false" />
+      <Label fx:id="labelInformacion" alignment="CENTER" contentDisplay="CENTER" prefHeight="325.0" prefWidth="600.0" text="Informacion" textFill="WHITE" visible="false">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
+      <Button fx:id="botonVolverJuego" layoutX="252.0" layoutY="336.0" mnemonicParsing="false" onAction="#botonVolver" text="Volver al juego" visible="false" />
+      <TextField fx:id="textFieldEliminar" layoutX="186.0" layoutY="97.0" prefHeight="25.0" prefWidth="226.0" promptText="Olvidar..." visible="false" />
+      <Button fx:id="botonEliminar" layoutX="270.0" layoutY="270.0" mnemonicParsing="false" onAction="#botonEliminar" text="Eliminar" visible="false" />
+      <ListView fx:id="lista" editable="true" layoutY="25.0" prefHeight="300.0" prefWidth="600.0" style="-fx-background-color: #292827;" visible="false" />
+      <MenuBar fx:id="menu" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="juego" disable="true" mnemonicParsing="false" text="Juego">
+            <items>
+                  <MenuItem fx:id="cargar" mnemonicParsing="false" onAction="#menuCargar" text="Cargar" />
+              <MenuItem fx:id="reiniciar" mnemonicParsing="false" onAction="#menuReiniciar" text="Reinciar" />
+                  <MenuItem fx:id="olvidar" mnemonicParsing="false" onAction="#menuOlvidar" text="Olvidar" />
+                  <MenuItem fx:id="salir" mnemonicParsing="false" onAction="#menuSalir" text="Salir" />
+            </items>
+          </Menu>
+          <Menu fx:id="informacion" disable="true" mnemonicParsing="false" text="Informacion">
+            <items>
+              <MenuItem fx:id="preguntas" mnemonicParsing="false" onAction="#menuPreguntas" text="Preguntas" />
+                  <MenuItem fx:id="superheroes" mnemonicParsing="false" onAction="#menuSuperheroes" text="Superheroes" />
+                  <MenuItem fx:id="conocimiento" mnemonicParsing="false" onAction="#menuConocimiento" text="Conocimiento" />
+            </items>
+          </Menu>
+          <Menu fx:id="ayuda" mnemonicParsing="false" text="Ayuda">
+            <items>
+              <MenuItem fx:id="manual" mnemonicParsing="false" onAction="#menuManual" text="Manual" />
+                  <MenuItem fx:id="about" mnemonicParsing="false" onAction="#menuAbout" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
